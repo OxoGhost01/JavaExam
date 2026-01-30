@@ -1,11 +1,13 @@
 public class PokemonEau extends Pokemon {
 
     public PokemonEau(String nom, int hp, int atk) {
+        /* Initialize the attributes */
         super(nom, hp, atk);
     }
 
     @Override
     public void attaquer(Pokemon pokemon) {
+        /*  Attack a pokemon with multiplicators for the different types */
         if (pokemon != null){
             if (pokemon instanceof PokemonFeu) {
                 pokemon.hp -= this.atk * 2;
